@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Drawing Canvas</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <canvas id="canvas"></canvas><br>
+        Square Counter:<p id="squareCounter">0</p>
+        Not Square Counter:<p id="notSquareCounter">0</p>
+        <form>
+            <input type="radio" name="isSquare" id="square" checked>Square</input>
+            <input type="radio" name="isSquare" id="not-square">Not Square</input>
+        </form>
+        <button id="popSquare">Pop From Square</button>
+        <button id="popNotSquare">Pop From NotSquare</button>
+        <button id="save">Save</button>
+        <br>
+
+
+        <script src="./FileSaver.js"></script>
+        <script src="./canvas.js"></script>
+    </body>
+</html>
