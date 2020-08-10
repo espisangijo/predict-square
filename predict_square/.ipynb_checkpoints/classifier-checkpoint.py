@@ -56,5 +56,5 @@ class SVMClassifier():
                         [('en', 0.915301501750946), ('zh', 0.06814993172883987)]]
         '''
         
-        model_results = self.__model.predict(data)
+        model_results = self.__model.predict([data])
         return model_results
