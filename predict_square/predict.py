@@ -1,8 +1,8 @@
 import os
-from .classifier import SquareClassifier, SVMClassifier
+from .classifier import SVMClassifier
 from .utils import interpolate, normalize, skinny
 
-class Predictor():
+class Predictor:
     def __init__(self, classifier=SVMClassifier()):
         self.__clf = classifier
 
@@ -13,11 +13,14 @@ class Predictor():
 
         return skinny_data
 
-    def predict_proba(self, data):
+    def predict(self, data):
         data = self.__preprocess(data)
         prediction = self.__clf.predict(data)
-#         prediction_proba = self.__clf.predict_proba(data)
+        return prediction
 
+    def predict_proba(self, data):
+        data = self.__preprocess(data)
+        prediction = self.__clf.predict_proba(data)
         return prediction
 
 if __name__ == '__main__':

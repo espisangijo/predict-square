@@ -4,10 +4,16 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+jupyterlab = "*"
 
 [packages]
 torch = "*"
 torchvision = "*"
+numpy = "*"
+falcon = "*"
+gunicorn = "*"
+scipy = "*"
+sklearn = "*"
 
 [requires]
 python_version = "3.7"

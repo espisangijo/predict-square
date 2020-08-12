@@ -46,3 +46,9 @@ def skinny(data):
         a.append(x)
         b.append(y)
     return list(a) + list(b)
+
+def preprocess(data, div=100):
+    data = normalize(data)
+    data = interpolate(data, div)
+    data = skinny(data)
+    return data
